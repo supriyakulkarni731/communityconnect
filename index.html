@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Community Connect — a platform connecting volunteers, donors, and community organizations to support elderly people, children in care, and families in need.">
+    <title>Community Connect — Together, We Can Make a Difference</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Skip to content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <span class="top-bar-text">🌍 Community Connect — Small Actions, Big Impact</span>
+        <div class="top-bar-controls">
+            <button id="elderlyToggleBtn" class="elderly-btn" aria-pressed="false" title="Toggle Elderly-Friendly Mode">
+                👴 Elderly Mode
+            </button>
+            <button id="darkModeBtn" class="dark-btn" aria-pressed="false" title="Toggle Dark Mode">
+                🌙 Dark Mode
+            </button>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header>
+        <a href="#home" class="logo-link" aria-label="Community Connect Home">
+            <h1>🌍 Community Connect</h1>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <nav id="mainNav" role="navigation" aria-label="Main navigation">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#matcher">Get Help</a>
+            <a href="#services">Services</a>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#contact">Register</a>
+        </nav>
+    </header>
+
+    <main id="main-content">
+
+        <!-- Hero Section -->
+        <section class="hero" id="home" aria-label="Hero">
+            <div class="hero-bg-shapes" aria-hidden="true">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+            <div class="hero-content">
+                <div class="hero-badge">✨ Making Community Stronger</div>
+                <h2>Together, We Can<br><span class="hero-highlight">Make a Difference.</span></h2>
+                <p>
+                    Connecting volunteers, donors and community organizations
+                    to support elderly people, children in care, and families in need.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#matcher" class="button button-primary" id="heroGetHelpBtn">Find Help Now</a>
+                    <a href="#services" class="button button-secondary" id="heroExploreBtn">Explore Services</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-num" id="statVolunteers">0</span>
+                        <span class="stat-label">Volunteers</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-num" id="statDonations">0</span>
+                        <span class="stat-label">Donations</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-num" id="statHelped">0</span>
+                        <span class="stat-label">People Helped</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section" aria-labelledby="aboutTitle">
+            <h2 class="section-title" id="aboutTitle">About Community Connect</h2>
+            <div class="about-grid">
+                <div class="about-text-block">
+                    <p class="about-text">
+                        Community Connect is a community support platform designed to connect people who need
+                        assistance with people who want to help. Our mission is to encourage volunteering,
+                        share useful resources, and make community support easier to coordinate.
+                    </p>
+                    <p class="about-text">
+                        We believe in privacy, dignity, and the power of small acts. Every registration,
+                        every food donation, every volunteer hour earns <strong>Kindness Points</strong> —
+                        our way of recognizing your community spirit.
+                    </p>
+                </div>
+                <div class="about-values">
+                    <div class="value-chip">🔒 Privacy First</div>
+                    <div class="value-chip">♿ Accessible</div>
+                    <div class="value-chip">🤝 Community Driven</div>
+                    <div class="value-chip">📍 Local Impact</div>
+                    <div class="value-chip">🎯 Real Functionality</div>
+                    <div class="value-chip">⭐ Kindness Points</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Smart Help Matcher -->
+        <section id="matcher" class="section matcher-section" aria-labelledby="matcherTitle">
+            <div class="section-inner">
+                <h2 class="section-title" id="matcherTitle">🎯 Smart Help Matcher</h2>
+                <p class="section-subtitle">Tell us what you need, and we'll connect you to the right service.</p>
+                <div class="matcher-box">
+                    <div class="matcher-questions">
+                        <div class="matcher-step active" id="matcherStep1">
+                            <p class="matcher-question">What best describes your situation?</p>
+                            <div class="matcher-options" role="group" aria-label="Help type selection">
+                                <button class="matcher-opt" data-key="volunteer" id="matchOptVolunteer">🤝 I want to volunteer</button>
+                                <button class="matcher-opt" data-key="food" id="matchOptFood">🍱 I need food help</button>
+                                <button class="matcher-opt" data-key="items" id="matchOptItems">📚 I need/have items to share</button>
+                                <button class="matcher-opt" data-key="help" id="matchOptHelp">🏡 I need community assistance</button>
+                                <button class="matcher-opt" data-key="blood" id="matchOptBlood">🩸 Blood donor / need blood</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="matcher-result" id="matcherResult" aria-live="polite" role="status"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Five Modules -->
+        <section id="services" class="section" aria-labelledby="servicesTitle">
+            <h2 class="section-title" id="servicesTitle">Our Five Modules</h2>
+            <p class="section-subtitle">Click any module to register or take action.</p>
+            <div class="cards">
+
+                <article class="card" id="volunteer-connect" tabindex="0">
+                    <div class="card-icon" aria-hidden="true">🤝</div>
+                    <div class="card-badge volunteer-badge">Volunteer Connect</div>
+                    <h3>Volunteer Connect</h3>
+                    <p>Discover volunteering opportunities and participate in community events. Earn Kindness Points for every session!</p>
+                    <div class="card-meta">
+                        <span class="meta-tag">📍 Local</span>
+                        <span class="meta-tag">⭐ +50 Points</span>
+                    </div>
+                    <button class="button card-btn" id="volunteerBtn" onclick="openModal('volunteer')">
+                        Join as Volunteer
+                    </button>
+                </article>
+
+                <article class="card" id="foodshare" tabindex="0">
+                    <div class="card-icon" aria-hidden="true">🍱</div>
+                    <div class="card-badge food-badge">FoodShare</div>
+                    <h3>FoodShare</h3>
+                    <p>Coordinate surplus food donations with authorized community organizations. Fight food waste together.</p>
+                    <div class="card-meta">
+                        <span class="meta-tag">🌿 Eco</span>
+                        <span class="meta-tag">⭐ +30 Points</span>
+                    </div>
+                    <button class="button card-btn" id="foodBtn" onclick="openModal('food')">
+                        Donate Food
+                    </button>
+                </article>
+
+                <article class="card" id="sharecare" tabindex="0">
+                    <div class="card-icon" aria-hidden="true">📚</div>
+                    <div class="card-badge share-badge">ShareCare</div>
+                    <h3>ShareCare</h3>
+                    <p>Share books, clothes, stationery and other useful resources with families in need.</p>
+                    <div class="card-meta">
+                        <span class="meta-tag">♻️ Reuse</span>
+                        <span class="meta-tag">⭐ +20 Points</span>
+                    </div>
+                    <button class="button card-btn" id="shareBtn" onclick="openModal('share')">
+                        Share Resources
+                    </button>
+                </article>
+
+                <article class="card" id="helpnear" tabindex="0">
+                    <div class="card-icon" aria-hidden="true">🏡</div>
+                    <div class="card-badge help-badge">HelpNear</div>
+                    <h3>HelpNear</h3>
+                    <p>Connect community members with non-emergency assistance — errands, companionship, and more.</p>
+                    <div class="card-meta">
+                        <span class="meta-tag">❤️ Care</span>
+                        <span class="meta-tag">⭐ +40 Points</span>
+                    </div>
+                    <button class="button card-btn" id="helpBtn" onclick="openModal('help')">
+                        Request / Offer Help
+                    </button>
+                </article>
+
+                <article class="card" id="blood-donor-connect" tabindex="0">
+                    <div class="card-icon" aria-hidden="true">🩸</div>
+                    <div class="card-badge blood-badge">Blood Donor Connect</div>
+                    <h3>Blood Donor Connect</h3>
+                    <p>Help willing donors connect through privacy-conscious arrangements. Your donation could save a life.</p>
+                    <div class="card-meta">
+                        <span class="meta-tag">🔒 Private</span>
+                        <span class="meta-tag">⭐ +60 Points</span>
+                    </div>
+                    <button class="button card-btn" id="bloodBtn" onclick="openModal('blood')">
+                        Register Interest
+                    </button>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Kindness Points & Leaderboard -->
+        <section id="kindness" class="section kindness-section" aria-labelledby="kindnessTitle">
+            <div class="section-inner">
+                <h2 class="section-title" id="kindnessTitle">⭐ Kindness Points</h2>
+                <p class="section-subtitle">Every action earns points. Check your total and see the community leaderboard.</p>
+                <div class="kindness-layout">
+                    <div class="kindness-card">
+                        <div class="points-display">
+                            <div class="points-circle" id="myPointsCircle">
+                                <span class="points-num" id="myPoints">0</span>
+                                <span class="points-label">Your Points</span>
+                            </div>
+                        </div>
+                        <div class="points-breakdown" id="pointsBreakdown">
+                            <p class="points-empty">No activities yet. Start contributing to earn points!</p>
+                        </div>
+                        <button class="button button-outline" id="checkPointsBtn" onclick="checkPoints()">
+                            🔍 Look Up Points by Name
+                        </button>
+                    </div>
+                    <div class="leaderboard-card">
+                        <h3>🏆 Community Leaderboard</h3>
+                        <div class="leaderboard" id="leaderboard" aria-label="Kindness Points Leaderboard" role="list">
+                            <p class="empty-state">No entries yet. Be the first!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact Dashboard -->
+        <section id="dashboard" class="section dashboard-section" aria-labelledby="dashboardTitle">
+            <div class="section-inner">
+                <h2 class="section-title" id="dashboardTitle">📊 Impact Dashboard</h2>
+                <p class="section-subtitle">Real-time statistics reflecting community activity.</p>
+                <div class="dashboard-grid">
+                    <div class="dash-card" id="dashVolunteer">
+                        <div class="dash-icon">🤝</div>
+                        <div class="dash-num" id="dashVolNum">0</div>
+                        <div class="dash-label">Volunteer Registrations</div>
+                    </div>
+                    <div class="dash-card" id="dashFood">
+                        <div class="dash-icon">🍱</div>
+                        <div class="dash-num" id="dashFoodNum">0</div>
+                        <div class="dash-label">Food Donations</div>
+                    </div>
+                    <div class="dash-card" id="dashShare">
+                        <div class="dash-icon">📚</div>
+                        <div class="dash-num" id="dashShareNum">0</div>
+                        <div class="dash-label">Resource Shares</div>
+                    </div>
+                    <div class="dash-card" id="dashHelp">
+                        <div class="dash-icon">🏡</div>
+                        <div class="dash-num" id="dashHelpNum">0</div>
+                        <div class="dash-label">Help Requests</div>
+                    </div>
+                    <div class="dash-card" id="dashBlood">
+                        <div class="dash-icon">🩸</div>
+                        <div class="dash-num" id="dashBloodNum">0</div>
+                        <div class="dash-label">Blood Donor Registrations</div>
+                    </div>
+                    <div class="dash-card dash-total" id="dashTotal">
+                        <div class="dash-icon">⭐</div>
+                        <div class="dash-num" id="dashTotalPoints">0</div>
+                        <div class="dash-label">Total Kindness Points Awarded</div>
+                    </div>
+                </div>
+                <div class="activity-feed">
+                    <h3>📋 Recent Activity</h3>
+                    <ul id="activityFeed" class="feed-list" aria-label="Recent community activity" aria-live="polite">
+                        <li class="empty-state">No activity yet. Be the first to contribute!</li>
+                    </ul>
+                    <button class="button button-outline" id="clearDataBtn" onclick="confirmClear()">
+                        🗑️ Clear All Data (Demo Reset)
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section id="how-it-works" class="section how-section" aria-labelledby="howTitle">
+            <h2 class="section-title" id="howTitle">How It Works</h2>
+            <div class="how-steps">
+                <div class="how-step">
+                    <div class="step-number">01</div>
+                    <div class="step-icon" aria-hidden="true">🎯</div>
+                    <h3>Match</h3>
+                    <p>Use the Smart Help Matcher to find the right service for your situation.</p>
+                </div>
+                <div class="how-connector" aria-hidden="true"></div>
+                <div class="how-step">
+                    <div class="step-number">02</div>
+                    <div class="step-icon" aria-hidden="true">📝</div>
+                    <h3>Register</h3>
+                    <p>Fill in a simple, secure form for your chosen module.</p>
+                </div>
+                <div class="how-connector" aria-hidden="true"></div>
+                <div class="how-step">
+                    <div class="step-number">03</div>
+                    <div class="step-icon" aria-hidden="true">⭐</div>
+                    <h3>Earn Points</h3>
+                    <p>Automatically earn Kindness Points for every contribution.</p>
+                </div>
+                <div class="how-connector" aria-hidden="true"></div>
+                <div class="how-step">
+                    <div class="step-number">04</div>
+                    <div class="step-icon" aria-hidden="true">🤝</div>
+                    <h3>Make Impact</h3>
+                    <p>Coordinate with community organizations and see your impact grow.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- General Registration Section -->
+        <section id="contact" class="section" aria-labelledby="contactTitle">
+            <h2 class="section-title" id="contactTitle">Get Involved</h2>
+            <p class="section-subtitle">Use the quick form below or click a module button above.</p>
+            <form id="communityForm" class="form-box" novalidate>
+                <label for="module">Select a Module</label>
+                <select id="module" name="module" required>
+                    <option value="">Choose a service...</option>
+                    <option value="volunteer">Volunteer Connect</option>
+                    <option value="food">FoodShare</option>
+                    <option value="share">ShareCare</option>
+                    <option value="help">HelpNear</option>
+                    <option value="blood">Blood Donor Connect</option>
+                </select>
+
+                <label for="nameGeneral">Your Name</label>
+                <input type="text" id="nameGeneral" name="name" maxlength="80" required placeholder="Enter your name">
+
+                <label for="descriptionGeneral">Details</label>
+                <textarea id="descriptionGeneral" name="description" maxlength="1000" required placeholder="Describe how you would like to help or what you need..."></textarea>
+
+                <button type="submit" class="button" id="communityFormSubmit">Submit Registration</button>
+                <p id="message" role="status" aria-live="polite"></p>
+            </form>
+            <p class="notice">
+                🔒 Privacy notice: Data is stored locally in your browser (localStorage) for demonstration purposes.
+                No information is sent to any external server.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <h3>🌍 Community Connect</h3>
+                <p>Small Actions, Big Impact.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#matcher">Smart Matcher</a>
+                <a href="#services">Services</a>
+                <a href="#dashboard">Dashboard</a>
+            </div>
+            <div class="footer-info">
+                <p>Third-Semester Engineering Mini-Project</p>
+                <p>&copy; 2026 Community Connect</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===================== MODALS ===================== -->
+
+    <!-- Volunteer Connect Modal -->
+    <div class="modal-overlay" id="volunteerModal" role="dialog" aria-modal="true" aria-labelledby="volunteerModalTitle">
+        <div class="modal">
+            <button class="modal-close" onclick="closeModal('volunteerModal')" aria-label="Close volunteer modal">&#10005;</button>
+            <div class="modal-icon">🤝</div>
+            <h2 id="volunteerModalTitle">Volunteer Connect</h2>
+            <p class="modal-desc">Join our community of volunteers and earn <strong>50 Kindness Points</strong>!</p>
+            <form id="volunteerForm" novalidate>
+                <label for="volName">Full Name *</label>
+                <input type="text" id="volName" name="name" maxlength="80" required placeholder="Your full name">
+
+                <label for="volEmail">Email Address *</label>
+                <input type="email" id="volEmail" name="email" required placeholder="your@email.com">
+
+                <label for="volPhone">Phone Number (Optional)</label>
+                <input type="tel" id="volPhone" name="phone" placeholder="+91 98765 43210">
+
+                <label for="volSkills">Your Skills / Interests *</label>
+                <select id="volSkills" name="skills" required>
+                    <option value="">Select your primary skill...</option>
+                    <option value="Teaching/Tutoring">Teaching / Tutoring</option>
+                    <option value="Medical/First Aid">Medical / First Aid</option>
+                    <option value="Driving/Transport">Driving / Transport</option>
+                    <option value="Cooking">Cooking</option>
+                    <option value="Event Management">Event Management</option>
+                    <option value="Tech/IT Support">Tech / IT Support</option>
+                    <option value="Elder Care">Elder Care</option>
+                    <option value="Child Care">Child Care</option>
+                    <option value="General Help">General Help</option>
+                </select>
+
+                <label for="volAvail">Availability *</label>
+                <select id="volAvail" name="availability" required>
+                    <option value="">Select availability...</option>
+                    <option value="Weekdays">Weekdays</option>
+                    <option value="Weekends">Weekends</option>
+                    <option value="Weekdays & Weekends">Weekdays &amp; Weekends</option>
+                    <option value="Flexible">Flexible</option>
+                </select>
+
+                <label for="volLocation">Area / Locality *</label>
+                <input type="text" id="volLocation" name="location" maxlength="100" required placeholder="Your area or locality">
+
+                <label for="volNotes">Additional Notes</label>
+                <textarea id="volNotes" name="notes" maxlength="500" placeholder="Any additional information..."></textarea>
+
+                <button type="submit" class="button" id="volSubmit">🤝 Register as Volunteer (+50 pts)</button>
+                <p class="form-msg" id="volMsg" role="status" aria-live="polite"></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- FoodShare Modal -->
+    <div class="modal-overlay" id="foodModal" role="dialog" aria-modal="true" aria-labelledby="foodModalTitle">
+        <div class="modal">
+            <button class="modal-close" onclick="closeModal('foodModal')" aria-label="Close food donation modal">&#10005;</button>
+            <div class="modal-icon">🍱</div>
+            <h2 id="foodModalTitle">FoodShare</h2>
+            <p class="modal-desc">Donate surplus food and earn <strong>30 Kindness Points</strong>. A QR confirmation will be generated!</p>
+            <form id="foodForm" novalidate>
+                <label for="foodName">Your Name *</label>
+                <input type="text" id="foodName" name="name" maxlength="80" required placeholder="Your name">
+
+                <label for="foodType">Type of Food *</label>
+                <select id="foodType" name="foodType" required>
+                    <option value="">Select food type...</option>
+                    <option value="Cooked Meals">Cooked Meals</option>
+                    <option value="Packaged Food">Packaged Food</option>
+                    <option value="Fruits & Vegetables">Fruits &amp; Vegetables</option>
+                    <option value="Bakery Items">Bakery Items</option>
+                    <option value="Grains & Pulses">Grains &amp; Pulses</option>
+                    <option value="Dairy">Dairy</option>
+                    <option value="Mixed / Other">Mixed / Other</option>
+                </select>
+
+                <label for="foodQuantity">Approximate Quantity *</label>
+                <input type="text" id="foodQuantity" name="quantity" maxlength="100" required placeholder="e.g., 5 kg, 20 meals, 3 boxes">
+
+                <label for="foodExpiry">Best Before / Expiry (if applicable)</label>
+                <input type="date" id="foodExpiry" name="expiry">
+
+                <label for="foodPickup">Pickup Address *</label>
+                <input type="text" id="foodPickup" name="pickup" maxlength="200" required placeholder="Address for collection">
+
+                <label for="foodTime">Preferred Pickup Time *</label>
+                <select id="foodTime" name="pickupTime" required>
+                    <option value="">Select preferred time...</option>
+                    <option value="Morning (6am-12pm)">Morning (6am-12pm)</option>
+                    <option value="Afternoon (12pm-4pm)">Afternoon (12pm-4pm)</option>
+                    <option value="Evening (4pm-8pm)">Evening (4pm-8pm)</option>
+                    <option value="Flexible">Flexible</option>
+                </select>
+
+                <label for="foodContact">Contact Number *</label>
+                <input type="tel" id="foodContact" name="contact" required placeholder="+91 98765 43210">
+
+                <button type="submit" class="button" id="foodSubmit">🍱 Submit Food Donation (+30 pts)</button>
+                <p class="form-msg" id="foodMsg" role="status" aria-live="polite"></p>
+            </form>
+            <div class="qr-section" id="foodQrSection" style="display:none;">
+                <h3>✅ Donation Confirmed!</h3>
+                <p>Show this QR code to the collection volunteer for verification.</p>
+                <div class="qr-code-display" id="foodQrCode" aria-label="Donation QR Code"></div>
+                <p class="qr-ref" id="foodQrRef"></p>
+                <button class="button button-outline" onclick="window.print()">🖨️ Print / Save QR</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ShareCare Modal -->
+    <div class="modal-overlay" id="shareModal" role="dialog" aria-modal="true" aria-labelledby="shareModalTitle">
+        <div class="modal">
+            <button class="modal-close" onclick="closeModal('shareModal')" aria-label="Close ShareCare modal">&#10005;</button>
+            <div class="modal-icon">📚</div>
+            <h2 id="shareModalTitle">ShareCare</h2>
+            <p class="modal-desc">Share resources and earn <strong>20 Kindness Points</strong>!</p>
+            <form id="shareForm" novalidate>
+                <label for="shareName">Your Name *</label>
+                <input type="text" id="shareName" name="name" maxlength="80" required placeholder="Your name">
+
+                <label for="shareType">Type of Item(s) *</label>
+                <select id="shareType" name="itemType" required>
+                    <option value="">Select item type...</option>
+                    <option value="Books / Stationery">Books / Stationery</option>
+                    <option value="Clothes / Footwear">Clothes / Footwear</option>
+                    <option value="Toys / Games">Toys / Games</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Furniture">Furniture</option>
+                    <option value="Kitchen Items">Kitchen Items</option>
+                    <option value="Medical Equipment">Medical Equipment</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <label for="shareDesc">Item Description *</label>
+                <textarea id="shareDesc" name="description" maxlength="500" required placeholder="Describe the items, condition, quantity..."></textarea>
+
+                <label for="shareCondition">Item Condition *</label>
+                <select id="shareCondition" name="condition" required>
+                    <option value="">Select condition...</option>
+                    <option value="New / Unused">New / Unused</option>
+                    <option value="Good Condition">Good Condition</option>
+                    <option value="Usable">Usable</option>
+                </select>
+
+                <label for="shareLocation">Collection Location *</label>
+                <input type="text" id="shareLocation" name="location" maxlength="200" required placeholder="Address or area">
+
+                <label for="shareContact">Contact *</label>
+                <input type="text" id="shareContact" name="contact" maxlength="100" required placeholder="Phone or email">
+
+                <button type="submit" class="button" id="shareSubmit">📚 Share Resources (+20 pts)</button>
+                <p class="form-msg" id="shareMsg" role="status" aria-live="polite"></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- HelpNear Modal -->
+    <div class="modal-overlay" id="helpModal" role="dialog" aria-modal="true" aria-labelledby="helpModalTitle">
+        <div class="modal">
+            <button class="modal-close" onclick="closeModal('helpModal')" aria-label="Close HelpNear modal">&#10005;</button>
+            <div class="modal-icon">🏡</div>
+            <h2 id="helpModalTitle">HelpNear</h2>
+            <p class="modal-desc">Request or offer community assistance and earn <strong>40 Kindness Points</strong>!</p>
+            <form id="helpForm" novalidate>
+                <label for="helpName">Your Name *</label>
+                <input type="text" id="helpName" name="name" maxlength="80" required placeholder="Your name">
+
+                <label for="helpType">Are you...? *</label>
+                <select id="helpType" name="helpType" required>
+                    <option value="">Select...</option>
+                    <option value="Requesting Help">Requesting Help</option>
+                    <option value="Offering Help">Offering Help</option>
+                </select>
+
+                <label for="helpCategory">Category *</label>
+                <select id="helpCategory" name="category" required>
+                    <option value="">Select category...</option>
+                    <option value="Errands / Shopping">Errands / Shopping</option>
+                    <option value="Companionship / Check-in">Companionship / Check-in</option>
+                    <option value="Home Tasks">Home Tasks</option>
+                    <option value="Transport">Transport</option>
+                    <option value="Tech Help">Tech Help</option>
+                    <option value="Reading / Writing Assistance">Reading / Writing Assistance</option>
+                    <option value="Medical Appointment Support">Medical Appointment Support</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <label for="helpDesc">Details *</label>
+                <textarea id="helpDesc" name="description" maxlength="500" required placeholder="Describe the help needed or offered..."></textarea>
+
+                <label for="helpLocation">Location / Area *</label>
+                <input type="text" id="helpLocation" name="location" maxlength="200" required placeholder="Your area or locality">
+
+                <label for="helpContact">Contact *</label>
+                <input type="text" id="helpContact" name="contact" maxlength="100" required placeholder="Phone or email">
+
+                <button type="submit" class="button" id="helpSubmit">🏡 Submit (+40 pts)</button>
+                <p class="form-msg" id="helpMsg" role="status" aria-live="polite"></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Blood Donor Connect Modal -->
+    <div class="modal-overlay" id="bloodModal" role="dialog" aria-modal="true" aria-labelledby="bloodModalTitle">
+        <div class="modal">
+            <button class="modal-close" onclick="closeModal('bloodModal')" aria-label="Close blood donor modal">&#10005;</button>
+            <div class="modal-icon">🩸</div>
+            <h2 id="bloodModalTitle">Blood Donor Connect</h2>
+            <p class="modal-desc">Register your interest and earn <strong>60 Kindness Points</strong>. Your privacy is protected.</p>
+            <div class="privacy-notice" role="note">
+                🔒 <strong>Privacy Guarantee:</strong> Your personal details are never shared directly. A coordinator will contact you anonymously.
+            </div>
+            <form id="bloodForm" novalidate>
+                <label for="bloodName">Your Name *</label>
+                <input type="text" id="bloodName" name="name" maxlength="80" required placeholder="Your name">
+
+                <label for="bloodGroup">Blood Group *</label>
+                <select id="bloodGroup" name="bloodGroup" required>
+                    <option value="">Select blood group...</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                </select>
+
+                <label for="bloodType">Registration Type *</label>
+                <select id="bloodType" name="type" required>
+                    <option value="">Select...</option>
+                    <option value="Donor">I want to donate blood</option>
+                    <option value="Recipient">I need blood (for a patient)</option>
+                </select>
+
+                <label for="bloodLocation">City / Area *</label>
+                <input type="text" id="bloodLocation" name="location" maxlength="100" required placeholder="City or area">
+
+                <label for="bloodContact">Contact (shared only with coordinator) *</label>
+                <input type="text" id="bloodContact" name="contact" maxlength="100" required placeholder="Phone or email">
+
+                <label for="bloodNotes">Additional Notes</label>
+                <textarea id="bloodNotes" name="notes" maxlength="300" placeholder="Last donation date, medical notes, urgency..."></textarea>
+
+                <button type="submit" class="button" id="bloodSubmit">🩸 Register Interest (+60 pts)</button>
+                <p class="form-msg" id="bloodMsg" role="status" aria-live="polite"></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Kindness Points Lookup Modal -->
+    <div class="modal-overlay" id="pointsModal" role="dialog" aria-modal="true" aria-labelledby="pointsModalTitle">
+        <div class="modal modal-sm">
+            <button class="modal-close" onclick="closeModal('pointsModal')" aria-label="Close points lookup">&#10005;</button>
+            <div class="modal-icon">⭐</div>
+            <h2 id="pointsModalTitle">Look Up Your Points</h2>
+            <form id="pointsLookupForm" novalidate>
+                <label for="lookupName">Enter your name</label>
+                <input type="text" id="lookupName" name="lookupName" maxlength="80" required placeholder="Your name as registered">
+                <button type="submit" class="button" id="lookupSubmit">🔍 Find My Points</button>
+                <div id="lookupResult" class="lookup-result" aria-live="polite" role="status"></div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div class="modal-overlay" id="confirmModal" role="dialog" aria-modal="true" aria-labelledby="confirmModalTitle">
+        <div class="modal modal-sm">
+            <h2 id="confirmModalTitle">⚠️ Confirm Reset</h2>
+            <p>This will clear ALL community data stored in your browser. This action cannot be undone.</p>
+            <div class="confirm-buttons">
+                <button class="button btn-danger" id="confirmYesBtn" onclick="clearAllData()">Yes, Clear All</button>
+                <button class="button button-outline" onclick="closeModal('confirmModal')">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast" role="alert" aria-live="assertive" aria-atomic="true"></div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
