@@ -1,0 +1,993 @@
+
+# Build a Complete Community Connect Website
+
+Build a complete, modern, professional, responsive, and functional website called **Community Connect — Community Volunteer Coordination and Resource Sharing Platform**.
+
+The website should help people volunteer, donate surplus food, share useful items, request community assistance, and connect with voluntary blood donors.
+
+**Main tagline:** “Small Actions, Big Impact.”
+
+**Hero heading:** “Together, We Can Make a Difference.”
+
+**Important:** Build the complete working website, not just a UI design or static landing page. All buttons, navigation links, forms, filters, dashboards, and interactive features must work. Use the following requirements as the complete project specification.
+
+## 1. Website Design and Colour Theme
+
+Use a consistent **Teal + Warm Yellow + Charcoal** colour theme throughout the entire website.
+
+- Primary Teal: `#0D9488`
+- Warm Yellow: `#FDE047`
+- Warm White: `#FFFEF7`
+- Charcoal: `#27272A`
+- Soft Mint: `#CCFBF1`
+- White: `#FFFFFF`
+
+### Apply the colours consistently
+
+- Navigation bar: teal background, white text, and clear active navigation indicators.
+- Hero section: teal gradient, white heading, readable text, and a warm-yellow call-to-action button.
+- Page backgrounds: warm white and white sections.
+- Service cards: white background, teal icons, rounded corners, subtle shadows, and soft mint highlights.
+- Primary buttons: teal with white text.
+- Important call-to-action buttons: warm yellow with charcoal text.
+- Body text: charcoal for readability.
+- Dashboard: teal and soft mint cards with warm-yellow highlights.
+- Kindness points and achievements: warm-yellow accents.
+- Forms and input fields: white backgrounds, clear borders, visible focus states, and teal highlights.
+- Footer: charcoal background with white text and teal/yellow accents.
+- Smart Help Matcher: teal headings, soft mint background, and attractive result cards.
+
+Use modern typography, consistent spacing, smooth scrolling, subtle animations, accessible contrast, attractive icons, and responsive layouts. The website must look excellent on mobile phones, tablets, laptops, and desktops.
+
+## 2. Navigation Bar
+
+Create a responsive navigation bar with:
+
+- Home
+- Volunteer Connect
+- FoodShare
+- ShareCare
+- HelpNear
+- Blood Donor Connect
+- Smart Help Matcher
+- Impact Dashboard
+- About Us
+- Contact
+
+Include a prominent **Get Involved** button.
+
+On mobile devices, use a working hamburger menu. All navigation links must lead to the correct section or page.
+
+## 3. Homepage
+
+Create an engaging homepage with:
+
+- The Community Connect logo or a simple original logo design.
+- The heading “Together, We Can Make a Difference.”
+- The tagline “Small Actions, Big Impact.”
+- A short introduction explaining how the platform connects people who need help with people willing to help.
+- A primary “Get Involved” button.
+- A secondary “Find Help” button.
+- Attractive illustrations or icons representing volunteers, food donations, item sharing, community support, and blood donor connections.
+- A section showing the five main services.
+- A “How It Works” section explaining how people can participate.
+- A community impact section with statistics.
+- A testimonial-style section using clearly labelled sample/demo content.
+- A footer with navigation, contact information fields, and useful links.
+
+Any sample impact statistics must be clearly identified as demo data until real activity is recorded.
+
+## 4. Volunteer Connect Module
+
+Build a functional volunteer registration and event coordination module.
+
+Features:
+
+- Volunteer registration form with name, email, optional phone number, interests, skills, and general availability.
+- Volunteer opportunity listings with title, description, date, location or meeting point, required volunteers, and status.
+- Search and filter opportunities by category, date, and availability.
+- Register for an opportunity.
+- Display registration confirmation and current registration status.
+- Allow users to view their registered opportunities.
+- Track volunteer hours when hours are recorded or approved.
+- Show completed and upcoming volunteer activities.
+- Include a volunteer appreciation section with certificates or badges as demo features if certificate generation is not implemented.
+
+Validate forms and display helpful error messages.
+
+## 5. FoodShare Module
+
+Build a food donation and collection management module.
+
+Features:
+
+- A form for listing surplus food donations.
+- Fields for food description, food category, quantity, preparation or packaging time where relevant, pickup window, general pickup location, and donor contact preference.
+- A list of available food donations.
+- Search and filter donations by category and availability.
+- Allow an interested recipient or volunteer to request a collection.
+- Show statuses such as Available, Collection Requested, Collected, and Completed.
+- Provide a way to update the status of a donation.
+- Display confirmation messages after successful actions.
+- Show a donation history or tracking section.
+
+Include responsible food-sharing guidance. Do not label food as safe automatically; users must follow appropriate food-handling and local food-safety requirements.
+
+## 6. ShareCare Module
+
+Build an item donation and resource-sharing module for books, clothes, stationery, educational materials, and other useful essentials.
+
+Features:
+
+- Add a donation with item name, category, description, quantity, condition, and general pickup location.
+- Display available donated items in attractive cards.
+- Search and filter items by category and condition.
+- Allow people to request an item.
+- Show request status, including Available, Requested, Reserved, and Donated.
+- Allow the donor or authorized administrator to update item status.
+- Display donation history and successful exchanges.
+- Show a confirmation message after a request or status update.
+
+Do not expose private home addresses publicly.
+
+## 7. HelpNear Module
+
+Build a community assistance module for non-emergency needs.
+
+Features:
+
+- A form for submitting a request for assistance.
+- Categories such as grocery assistance, help with errands, educational support, technology assistance, and support for elderly community members.
+- Fields for a short description, urgency level, general location, preferred assistance time, and contact preference.
+- Display assistance requests in a list or card layout.
+- Allow suitable volunteers to offer help or accept an assigned task.
+- Display request statuses such as Open, Volunteer Assigned, In Progress, and Completed.
+- Allow authorized users to update the task status.
+- Provide a simple task history.
+- Include clear confirmation and validation messages.
+
+Do not publish sensitive personal information. Clearly state that HelpNear is for non-emergency assistance and direct users to appropriate local emergency services in emergencies.
+
+## 8. Blood Donor Connect Module
+
+Create a privacy-conscious module for voluntary blood donor connections.
+
+Features:
+
+- A voluntary donor interest registration form.
+- Fields for name or display name, preferred contact method, city or general area, and blood group if the person chooses to provide it.
+- A directory of participating donors using only the information they have consented to share.
+- Search and filter by blood group and general location.
+- A way to express interest in contacting a donor or submit a connection request.
+- A clear consent and privacy notice.
+- An option to withdraw participation or remove a demo donor profile.
+- Clear notices that blood donation eligibility and medical suitability must be confirmed by qualified healthcare professionals.
+
+Never display private phone numbers, email addresses, or precise addresses publicly. Do not claim that a donor is medically eligible based only on their profile.
+
+## 9. Smart Help Matcher
+
+Build an interactive **Smart Help Matcher** that guides users to the most suitable service.
+
+Display this heading:
+
+**“Find the Right Way to Help.”**
+
+Ask users what they want to do using a dropdown or attractive selection cards.
+
+Options:
+
+1. I want to volunteer.
+2. I want to donate surplus food.
+3. I want to donate books, clothes, or other items.
+4. I need community assistance.
+5. I want to connect with blood donors.
+
+When a user selects an option and clicks **Find My Match**, show the correct recommendation.
+
+- Volunteer → Volunteer Connect
+- Food donation → FoodShare
+- Item donation → ShareCare
+- Community assistance → HelpNear
+- Blood donor connection → Blood Donor Connect
+
+Each result must include a short explanation, a relevant icon, and a working button that navigates to the corresponding module.
+
+Requirements:
+
+- Show a helpful message if no option has been selected.
+- Update the result immediately after a valid selection and button click.
+- Ensure every recommendation links to the correct section.
+- Use accessible labels and keyboard-friendly controls.
+- Implement this as a transparent, rule-based matching feature. Do not falsely claim it uses artificial intelligence or machine learning.
+
+## 10. Kindness Points and Achievements
+
+Create a simple gamification system to encourage community participation.
+
+Features:
+
+- Award demo points for completed volunteer activities, completed donations, and verified assistance tasks.
+- Display the user's points and achievement badges.
+- Include badges such as First Contribution, Food Saver, Community Helper, and Volunteer Champion.
+- Display progress toward the next achievement.
+- Include a clear explanation of how points are earned.
+
+Only award real points when the relevant activity is recorded or confirmed. Clearly identify sample accounts and sample scores as demo data.
+
+Do not allow users to award themselves unlimited points simply by clicking a button repeatedly.
+
+## 11. QR Donation Confirmation
+
+Create a QR-based donation confirmation feature.
+
+Features:
+
+- Provide a QR code or QR-based confirmation workflow for a donation or collection.
+- Associate the confirmation with a unique donation or transaction reference.
+- After a valid confirmation, update the donation or collection status.
+- Prevent the same transaction from being confirmed repeatedly.
+- Show a clear success or failure message.
+
+If secure QR verification requires a backend, implement a clearly labelled demo workflow first and document what is needed for production. Do not pretend that a visual QR code alone verifies a real transaction.
+
+## 12. Impact Dashboard
+
+Build a visually attractive dashboard displaying community activity.
+
+Include cards for:
+
+- Total volunteer registrations.
+- Completed volunteer activities.
+- Volunteer hours recorded.
+- Food donations collected.
+- Items donated.
+- Assistance requests completed.
+- Participating donors, where consent has been provided.
+- Community contributions recorded.
+
+Include attractive charts or progress visualizations showing activity by category and over time.
+
+Requirements:
+
+- Use actual application records when available.
+- Clearly label any sample figures as demo data.
+- Update the dashboard when relevant records change.
+- Do not show fabricated statistics as real community impact.
+- Make the dashboard responsive and easy to understand.
+
+## 13. Elderly-Friendly Accessibility Mode
+
+Add an optional accessibility mode for users who prefer a simpler interface.
+
+Features:
+
+- Larger text.
+- Larger buttons and touch targets.
+- Clearer spacing.
+- Simple language.
+- High-contrast controls.
+- Reduced motion where appropriate.
+- Easy-to-find assistance options.
+
+Provide a clearly visible toggle to enable and disable the mode. Make the controls work on desktop and mobile.
+
+## 14. User Accounts and Data Management
+
+Provide a sensible user experience for donors, volunteers, recipients, and administrators.
+
+Where supported, include:
+
+- Registration and login.
+- Basic user profile management.
+- My Activities or My Requests page.
+- A view of submitted donations, registrations, requests, and their statuses.
+- An administrative interface for managing listings, assigning tasks, and moderating records.
+- Input validation and clear error messages.
+- Confirmation messages for important actions.
+
+Use a proper backend and database if available. If the project is initially frontend-only, create a functional local demo with persistent browser storage where appropriate, and clearly explain its limitations.
+
+Do not store passwords in plain text or expose secret keys in frontend code. Use secure authentication and authorization for any production backend. Protect personal information and restrict administrative actions to authorized administrators.
+
+## 15. Contact and About Sections
+
+Create an About Us section explaining the purpose of Community Connect, its five services, and how community members can participate.
+
+Create a Contact section with a working, validated contact form containing name, email, subject, and message.
+
+Display a success message only when the message has actually been accepted by the implemented form handler or backend. If no email service is configured, clearly label the contact form as a demo and explain how to connect a real service.
+
+Do not invent official phone numbers, email addresses, organization names, or testimonials.
+
+## 16. Technical Requirements
+
+- Build a clean, maintainable, responsive website.
+- Use a consistent component and styling system.
+- Keep the design consistent across all modules.
+- Use semantic HTML, accessible form labels, keyboard navigation, and visible focus states.
+- Ensure buttons and links perform their intended actions.
+- Add validation for required fields and invalid input.
+- Display loading, success, empty, and error states where appropriate.
+- Avoid broken links, dead buttons, placeholder interactions, and console errors.
+- Ensure navigation and forms work on desktop and mobile.
+- Use appropriate icons and attractive illustrations.
+- Add sensible empty states when no donations, requests, or opportunities exist.
+- Do not use real personal information in demo data.
+- Do not claim any third-party integration is connected unless it has actually been configured.
+- Keep the website easy for a student to demonstrate during a college mini-project presentation.
+
+## 17. Testing and Completion
+
+Before considering the website complete:
+
+1. Test all navigation links.
+2. Test all five service modules.
+3. Test the Smart Help Matcher with all five options and with no selection.
+4. Test every form, including invalid and empty submissions.
+5. Test donation and assistance status updates.
+6. Test the dashboard and confirm that its figures reflect the available records.
+7. Test the Kindness Points system for duplicate awards.
+8. Test the QR confirmation workflow and duplicate confirmations.
+9. Test the elderly-friendly mode.
+10. Test responsive layouts on mobile, tablet, and desktop.
+11. Fix console errors, broken links, and non-working buttons.
+12. Verify that data persists according to the implemented storage method.
+
+After building, provide a concise explanation of the implemented features, how to run the project, whether a backend/database is connected, and which features still require configuration.
+
+**Final goal:** Create a polished, attractive, fully demonstrable Community Connect platform with the Teal + Warm Yellow + Charcoal colour theme, all five working modules, a Smart Help Matcher, Kindness Points, QR donation confirmation, an Impact Dashboard, and elderly-friendly accessibility. Preserve the core purpose of the project and prioritize real functionality, privacy, accessibility, and a professional presentation.
+
+COMMUNITY CONNECT+ – COMPLETE WEBSITE UPGRADE AND REDESIGN
+
+I have an existing website called Community Connect – Community Volunteer Coordination and Resource Sharing Platform.
+
+I want to upgrade my existing website by integrating the Smart Community Care Network and redesigning the entire website using a new colour palette.
+
+IMPORTANT:
+Do not create a completely new website. First inspect my existing project, understand its folder structure, frontend, backend, database, authentication system and existing features. Upgrade the existing website while preserving all working functionality and existing database records.
+
+PART 1: COMPLETE WEBSITE COLOUR REDESIGN
+
+This is a very important requirement.
+
+I want to change the entire website's existing colour theme to an elegant, warm and premium combination of:
+
+PRIMARY COLOUR:
+Clay Brown – HEX #6B352A
+
+SECONDARY COLOUR:
+Soft Butter – HEX #FFF1A6
+
+SUPPORTING COLOURS:
+
+- Warm Ivory – #FDFBF5
+- Deep Brown – #49301F
+- Muted Terracotta – #A66A50
+- Soft Beige – #F2E5D5
+- White – #FFFFFF
+
+Colour application
+
+Use Clay Brown (#6B352A) for:
+
+- Main navigation bar.
+- Website logo accents.
+- Primary buttons.
+- Main headings and section titles.
+- Footer background.
+- Active navigation indicators.
+- Important icons.
+- Admin dashboard highlights.
+
+Use Soft Butter (#FFF1A6) for:
+
+- Homepage highlights.
+- Feature section backgrounds.
+- Module cards and selected components.
+- Important information banners.
+- Hover highlights and selected states.
+- Decorative backgrounds.
+
+Use Warm Ivory (#FDFBF5) for the overall website background.
+
+Use Deep Brown (#49301F) for readable text and headings where appropriate.
+
+Use Muted Terracotta (#A66A50) and Soft Beige (#F2E5D5) for secondary cards, borders and decorative details.
+
+Design requirements
+
+I want the website to look:
+
+- Modern and premium.
+- Warm and welcoming.
+- Elegant and minimal.
+- Professional but socially meaningful.
+- Consistent across all pages.
+- Easy for elderly people to navigate.
+
+Avoid:
+
+- Bright neon colours.
+- Excessive gradients.
+- Too many unrelated colours.
+- Overcrowded layouts.
+- Heavy animations.
+- Unnecessary shadows.
+- Inconsistent button styles.
+
+Use a consistent design system throughout the website.
+
+Create reusable CSS variables for the colour palette so that all pages use the same colours.
+
+Example:
+
+:root {
+--primary: #6B352A;
+--secondary: #FFF1A6;
+--background: #FDFBF5;
+--text: #49301F;
+--accent: #A66A50;
+--soft-beige: #F2E5D5;
+--white: #FFFFFF;
+}
+
+Ensure good text contrast and accessibility. Do not use Soft Butter as a text colour on a light background.
+
+Redesign all existing pages using this palette, including login, registration, dashboard, module pages, forms, navigation and footer.
+
+Do not change the website's existing functionality while redesigning it.
+
+PART 2: PRESERVE EXISTING FIVE MODULES
+
+My website already contains these five modules:
+
+1. Volunteer Connect
+   
+   - Volunteer registration.
+   - Community event listings.
+   - Cleanliness drives.
+   - Charity events.
+   - Volunteer hour tracking.
+
+2. FoodShare
+   
+   - Surplus food donation.
+   - Available food listings.
+   - Food collection coordination.
+   - Donation status tracking.
+
+3. ShareCare
+   
+   - Books, clothes and stationery donations.
+   - Browse donated items.
+   - Request resources.
+   - Track donations and requests.
+
+4. HelpNear
+   
+   - Post help requests.
+   - Volunteer task acceptance.
+   - Pending and completed task tracking.
+   - Admin request management.
+
+5. Blood Donor Connect
+   
+   - Blood donor registration.
+   - Blood group search.
+   - Donor and requester connection.
+   - Donor verification.
+
+Preserve all these features and existing functionality.
+
+PART 3: SMART COMMUNITY CARE NETWORK
+
+Integrate Smart Community Care Network as the central system connecting all existing modules with new healthcare, elderly support, orphanage support and location-based services.
+
+Add the following features:
+
+1. Elderly Healthcare Support
+
+- Elderly user profiles.
+- Basic health information with consent.
+- Medicine reminders.
+- Doctor appointment requests.
+- Health checkup history.
+- Medical assistance requests.
+- Caregiver contact details.
+- Health appointment notifications.
+- Nearby hospital and clinic access.
+
+2. Medical Camp Locator
+
+- Upcoming free medical camps.
+- Camp name, date, time and location.
+- Eye, dental and general health checkups.
+- Registration functionality.
+- Available registration slots.
+- Admin camp management.
+
+3. Medicine Assistance
+
+- Prescribed medicine assistance requests.
+- Secure prescription uploads.
+- Volunteer delivery coordination.
+- Verified medicine donation programmes.
+- Request status tracking.
+
+Statuses: Pending, Verified, Assigned and Delivered.
+
+4. Emergency Health Assistance
+
+- Easily accessible SOS button.
+- Notify authorized caregivers and administrators.
+- Share location with permission.
+- Secure emergency contact details.
+- Nearby hospitals and emergency service information.
+- Emergency request status tracking.
+
+This feature must not replace official emergency services.
+
+5. Orphanage Support
+
+Education Sponsorship:
+
+- School fees.
+- Books and stationery.
+- Uniform donations.
+- Educational sponsorship tracking.
+
+Child Nutrition:
+
+- Food requirements.
+- Food donation tracking.
+- Distribution records.
+
+Skill Development:
+
+- Coding classes.
+- Computer education.
+- English learning.
+- Career guidance.
+- Volunteer teaching.
+
+Activities:
+
+- Sports events.
+- Cultural activities.
+- Music and art workshops.
+- Birthday celebrations.
+
+All child-related information must remain protected and be managed through verified orphanage administrators.
+
+PART 4: COMMUNITY CARE MAP
+
+Create a dedicated page called Nearby Help / Community Care Map.
+
+Use Leaflet and OpenStreetMap.
+
+Display:
+
+- Hospitals.
+- Clinics.
+- Pharmacies.
+- Old age homes.
+- Registered orphanages.
+- Blood banks.
+- NGOs.
+- Community service centres.
+- Medical camps.
+
+Features:
+
+- Location permission.
+- Map markers.
+- Category filters.
+- Search functionality.
+- Address and contact information.
+- Distance calculation.
+- Directions through a map service.
+- Organization verification status.
+
+Use genuine map data or verified listings. Never invent locations or expose private residential addresses.
+
+PART 5: VOLUNTEER LOCATION MATCHING
+
+Connect Volunteer Connect and HelpNear with location services.
+
+Workflow:
+
+1. User submits a help request.
+2. System identifies the relevant service area.
+3. Find eligible registered volunteers who opted into location-based matching.
+4. Volunteers receive eligible requests.
+5. Volunteer accepts the request.
+6. Admin monitors progress.
+7. Requester receives updates.
+
+Request statuses:
+
+- Pending.
+- Under Review.
+- Approved.
+- Volunteer Assigned.
+- In Progress.
+- Completed.
+- Cancelled.
+
+Protect volunteer location privacy.
+
+PART 6: DAILY ELDERLY WELL-BEING
+
+Create a daily check-in feature.
+
+Question: "How are you feeling today?"
+
+Options:
+
+- Good.
+- Need some assistance.
+- Would like someone to contact me.
+
+Store check-in history securely.
+
+Notify authorized caregivers if configured check-ins are missed.
+
+PART 7: DONATION TRANSPARENCY
+
+Upgrade donation management.
+
+Include:
+
+- Donation history.
+- Verified donation requirements.
+- Donation status.
+- Contribution allocation.
+- Receipts where supported.
+- Food distribution records.
+- Education sponsorship tracking.
+- Medicine assistance records.
+
+Create an impact dashboard showing verified statistics.
+
+PART 8: VOICE AND ACCESSIBILITY
+
+Make the website elderly-friendly.
+
+Include:
+
+- Large readable fonts.
+- Large buttons.
+- High contrast.
+- Simple navigation.
+- Kannada, Hindi and English language options.
+- Voice input where supported.
+- Text-to-speech.
+- Responsive mobile layout.
+
+PART 9: USER ROLES
+
+Maintain and extend existing roles:
+
+- Volunteer.
+- Donor.
+- Requester.
+- Elderly User.
+- Caregiver.
+- Orphanage Administrator.
+- Healthcare Provider.
+- Main Administrator.
+
+Implement secure role-based access control.
+
+PART 10: ADMIN DASHBOARD
+
+Create a central dashboard showing:
+
+- Total users.
+- Total volunteers.
+- Total donors.
+- Elderly users.
+- Verified orphanages.
+- Healthcare providers.
+- Pending requests.
+- Active emergency alerts.
+- Medical camps.
+- Donation statistics.
+- Completed volunteer tasks.
+- Monthly community impact.
+
+Use attractive charts, cards, filters and tables following the new Clay Brown and Soft Butter theme.
+
+PART 11: DATABASE AND BACKEND
+
+First inspect the existing database and reuse existing tables wherever possible.
+
+Add necessary tables for:
+
+- Elderly_Profile.
+- Caregiver_Details.
+- Orphanage_Profile.
+- Healthcare_Providers.
+- Health_Requests.
+- Medical_Camps.
+- Hospital_Locations.
+- Medicine_Assistance.
+- Emergency_Alerts.
+- Wellbeing_Checkins.
+- Education_Sponsorship.
+- Volunteer_Locations.
+- Donation_Tracking.
+- Service_Locations.
+
+Create appropriate relationships, indexes, primary keys and foreign keys.
+
+Do not delete existing records or unnecessarily duplicate tables.
+
+PART 12: TECHNICAL REQUIREMENTS
+
+Inspect and reuse the current technology stack.
+
+If the project currently uses HTML, CSS, JavaScript, Java and MySQL, continue with those technologies.
+
+Do not unnecessarily migrate the project to a different framework.
+
+Ensure:
+
+- Working frontend and backend integration.
+- Functional database operations.
+- Authentication.
+- Role-based authorization.
+- Working forms.
+- Search and filters.
+- Map integration.
+- Data persistence.
+- Input validation.
+- Error handling.
+- Secure handling of sensitive data.
+
+Do not create buttons that have no functionality.
+
+Do not use fake data as real live records.
+
+PART 13: FINAL DESIGN EXPECTATION
+
+The final website must maintain one consistent colour theme across every page.
+
+The website should feel like a professionally designed social-impact platform.
+
+Use:
+
+Clay Brown (#6B352A) as the primary brand colour.
+
+Soft Butter (#FFF1A6) as the signature secondary colour.
+
+Warm Ivory (#FDFBF5) as the main background.
+
+Deep Brown (#49301F) for readable text.
+
+The website must remain clean, elegant, responsive and easy to use.
+
+PART 14: IMPLEMENTATION PROCESS
+
+Follow this order:
+
+1. Inspect the existing website.
+2. Understand its current architecture.
+3. Back up important files and database.
+4. Apply the new colour theme across the entire website.
+5. Preserve all existing five modules.
+6. Integrate Smart Community Care Network.
+7. Develop healthcare and elderly assistance.
+8. Develop orphanage support.
+9. Implement Community Care Map.
+10. Implement location-based volunteer matching.
+11. Upgrade the admin dashboard.
+12. Connect all features to the database.
+13. Test all existing and new functionality.
+14. Fix errors and provide an implementation summary.
+
+IMPORTANT FINAL INSTRUCTION:
+
+Do not just create UI designs or static pages.
+
+Implement actual working features wherever the existing architecture supports them.
+
+If an external API, account or API key is required, clearly explain the setup.
+
+Do not overwrite my existing working project or delete existing functionality.
+
+My final vision:
+
+COMMUNITY CONNECT+
+
+"One Platform. Every Generation. Better Care."
+
+A connected community platform that brings together elderly people, orphanage organizations, volunteers, donors, healthcare providers and nearby support services.
+
+Start by inspecting the existing project before making any changes.
+FIX COMMUNITY CARE MAP – OPENSTREETMAP 403 ACCESS BLOCKED ERROR
+
+My existing Community Connect website has a Community Care Map page (care-map.html).
+
+Currently, the map is displaying repeated error tiles:
+
+"403 Access Blocked – App is not following the tile usage policy of OpenStreetMap's volunteer-run servers."
+
+I want you to investigate and fix this issue properly.
+
+IMPORTANT: Do not redesign the entire website. Do not delete any existing features. Fix only the map integration and related functionality.
+
+1. INSPECT THE EXISTING MAP IMPLEMENTATION
+
+- Open and inspect care-map.html.
+- Inspect the JavaScript file responsible for Leaflet initialization.
+- Check the current OpenStreetMap tile URL.
+- Check whether multiple map layers are being initialized.
+- Check whether map tiles are being requested repeatedly.
+- Check whether the browser is sending a valid Referer header.
+- Check the browser's Referrer-Policy settings.
+- Identify the actual reason for the 403 error before implementing the fix.
+
+2. FIX THE OPENSTREETMAP TILE CONFIGURATION
+
+If using OpenStreetMap standard raster tiles, configure Leaflet correctly.
+
+Use the official HTTPS tile URL:
+
+https://tile.openstreetmap.org/{z}/{x}/{y}.png
+
+Use a configuration similar to:
+
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+maxZoom: 19,
+referrerPolicy: 'strict-origin-when-cross-origin'
+}).addTo(map);
+
+Check compatibility with the installed Leaflet version before implementing.
+
+Ensure that the website does not suppress the browser's Referer header.
+
+Do not use no-referrer or restrictive referrer settings.
+
+Do not attempt to spoof browser headers or bypass OpenStreetMap restrictions.
+
+3. FIX DUPLICATE MAP REQUESTS
+
+- Initialize the map only once.
+- Avoid creating duplicate Leaflet map instances.
+- Avoid loading multiple tile layers unnecessarily.
+- Avoid unnecessary automatic map refreshes.
+- Avoid background tile preloading.
+- Avoid repeatedly requesting tiles for areas the user is not viewing.
+- Respect browser and server caching headers.
+- Do not send no-cache requests by default.
+
+4. RUN THE WEBSITE THROUGH A LOCAL SERVER
+
+Currently, I am opening the website directly using a local file path.
+
+Configure the project so that I can test it through a local development server.
+
+For example:
+
+http://localhost:5500/care-map.html
+
+Or use the existing development server if the project already has one.
+
+Do not instruct me to open the HTML file directly using file://.
+
+5. MAP FALLBACK SYSTEM
+
+If OpenStreetMap tiles remain unavailable, provide a graceful fallback.
+
+- Display a clear message instead of repeated 403 images.
+- Keep the map interface functional where possible.
+- Provide a link to open the location in an external map service.
+- If needed, support switching to a legitimate third-party map tile provider.
+- If another provider requires an API key, explain the configuration.
+
+Do not repeatedly switch between providers automatically.
+
+Do not use another provider without checking its usage terms.
+
+6. PRESERVE EXISTING COMMUNITY CARE MAP FEATURES
+
+Keep all existing features:
+
+- Hospitals.
+- Clinics.
+- Pharmacies.
+- Old age homes.
+- Orphanages.
+- Blood banks.
+- NGOs.
+- Medical camps.
+- Location markers.
+- Search bar.
+- Category filters.
+- Distance information.
+- Location permission.
+- Directions.
+
+Ensure all markers continue to work after fixing the map.
+
+7. MAINTAIN MY WEBSITE DESIGN
+
+Keep my selected colour theme:
+
+- Clay Brown: #6B352A
+- Soft Butter: #FFF1A6
+- Warm Ivory: #FDFBF5
+- Deep Brown: #49301F
+
+Keep the existing Community Connect design consistent.
+
+8. TEST BEFORE COMPLETION
+
+After implementing the changes:
+
+1. Run the website using localhost.
+2. Open Community Care Map.
+3. Verify that actual map tiles load.
+4. Check the browser Network tab for tile request failures.
+5. Verify that the map can zoom and move.
+6. Check that location markers appear.
+7. Check that category filters work.
+8. Check that location permission works.
+9. Confirm that there are no duplicate map instances.
+10. Verify that no 403 error tiles remain under normal supported usage.
+
+Do not simply hide the 403 error images using CSS.
+
+Fix the underlying map tile configuration or use a properly configured alternative provider.
+
+Finally, explain what caused the issue, which files were changed and how I can run the website correctly.
+
+Do not modify unrelated website modules.
+
+
+PART 15: FIX INCONSISTENT MAP LAYER SELECTION
+
+Inspect and fix the inconsistent map layer selection in Community Connect.
+
+Current issue:
+
+- Opening care-map.html directly through the local server displays OpenStreetMap Standard.
+- Opening Community Care Map through index.html displays CARTO Voyager.
+
+Requirements:
+
+1. Inspect the map initialization and tile-loading logic in care-map.html and related JavaScript files.
+2. Identify why the map layer selection differs.
+3. Make the default map layer consistent in both navigation paths.
+4. Use OpenStreetMap Standard as the preferred layer when it loads successfully.
+5. Keep CARTO Voyager as an automatic fallback if OpenStreetMap fails.
+6. Ensure map attribution is visible.
+7. Preserve all existing markers, categories, search, filters, location detection and responsive layout.
+8. Test both direct access and navigation from index.html.
+9. Do not modify unrelated website functionality.
+
+
+PART 16: REPLACE CARTO WITH OPENSTREETMAP TILE SERVICE (NO API KEY REQUIRED)
+
+Fix the Community Care Map in my existing Community Connect+ website.
+
+Current issue:
+The map displays repeated "API KEY REQUIRED – carto.com/basemaps/apiKey" messages. Location markers are visible, but the actual map tiles are not loading.
+
+Required solution:
+
+1. Identify the existing map implementation and locate the CARTO tile-layer URL.
+2. Replace the CARTO basemap with the OpenStreetMap tile service:
+https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png
+3. Configure the correct OpenStreetMap attribution:
+© OpenStreetMap contributors
+4. Preserve Leaflet functionality and the existing map layout.
+5. Keep all existing location markers, marker icons, popups, map layers, filters and controls.
+6. Ensure the map zoom and location interactions work correctly.
+7. Make the map responsive on desktop and mobile.
+8. Check that no CARTO tile URLs remain in the active map implementation.
+9. Do not remove any existing website features or modify unrelated pages.
+10. Test the map after making changes and confirm that actual map tiles load without an API key.
